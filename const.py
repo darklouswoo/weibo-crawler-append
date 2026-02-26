@@ -7,7 +7,7 @@ append模式：仅可在sqlite启用时使用。每次运行每个id只获取最
 overwrite模式：每次运行都会获取全量微博。
 注意：overwrite模式下暂不能记录上次获取微博的id，因此从overwrite模式转为append模式时，仍需获取所有数据
 """
-const.MODE = "overwrite"
+const.MODE = "append"
 
 """
 检查cookie是否有效
@@ -23,6 +23,6 @@ const.CHECK_COOKIE = {
     "HIDDEN_WEIBO": "微博内容",  # 你可能发现平台会自动给你的微博自动加个空格，但这里你不用加空格
 }
 const.NOTIFY = {
-    "NOTIFY": False,  # 是否通知
-    "PUSH_KEY": "",  # 这里使用push_deer做通知，填入pushdeer的pushkey
+    "NOTIFY": true,  # 是否通知
+    "PUSH_KEY": "PDU34757TYMla6gtRCCYm2DzgxNH9TOsaUbMQHkQD",  # 这里使用push_deer做通知，填入pushdeer的pushkey
 }
